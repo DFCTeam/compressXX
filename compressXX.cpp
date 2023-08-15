@@ -53,6 +53,7 @@ int main(int argc, char** argv)
         if (compressLvl != "") {
             compressLevel = stoi(compressLvl);
             system(("7z a -mx9 "+file+".xz "+file).c_str());
+            system(("7z a -mx9 " + file + "_1.xz " + file).c_str());
             for (int i = 2; i < timesInt; ++i) {
                 system(
                     (
